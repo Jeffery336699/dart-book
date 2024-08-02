@@ -1,6 +1,6 @@
 void main() {
   //if/else 示例
-  int index = 1;
+  int index = 21;
   if (index == 0) {
     print('index = 0');
   } else if (index == 1) {

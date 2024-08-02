@@ -14,9 +14,9 @@ void main() {
   print(messages.toString());
 
   //forEach迭代输出
-  messages.forEach((item){
-      print(item);
-  });
+  // messages.forEach((item){
+  //     print(item);
+  // });
 
   //for in语句迭代输出
   for(var x in messages) {

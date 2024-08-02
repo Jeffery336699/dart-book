@@ -8,10 +8,9 @@ void main() {
 }
 
 //参数sex为默认参数 当不传入sex参数时默认值为'男'
-void printUserInfo(String name,[String sex='男',int age]){
+void printUserInfo(String name,[String sex='男',int? age]){
   //age不传值时为null
   if(age!=null){
     print("姓名:$name 性别:$sex 年龄:$age");
-  }
-  print("姓名:$name 性别:$sex 年龄保密");
+  }else print("姓名:$name 性别:$sex 年龄保密");
 }

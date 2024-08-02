@@ -12,12 +12,12 @@ void getServerData(String url) {
   //请求参数 作用域在getServerData函数内
   var formData = {'id': '001'};
   //发起请求
-  request(url,formData,(int statusCode){
+  request(url,formData,(int statusCode){ //TODO 可能是inline
     if(statusCode == 200){
       //此处不能读取serverUrl变量
       print('请求地址为:' + url);
       //此处可以读取formData变量
-      print('请求参数为:' + formData['id']);
+      print('请求参数为:' + formData['id']!);
       //此处可以读取data变量
       print('成功返回数据为:' + data);
     }

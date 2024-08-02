@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/dio_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/dio_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/dio_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第20章元数据/metadata_json_annotation/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第20章元数据/metadata_json_annotation/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第20章元数据/metadata_json_annotation/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/http_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/http_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/http_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第24章Web开发/shared_preferences_web/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第24章Web开发/shared_preferences_web/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第24章Web开发/shared_preferences_web/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/websocket_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/websocket_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/websocket_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter-react-node/flutter-shop/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter-react-node/flutter-shop/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter-react-node/flutter-shop/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/shared_preferences/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/shared_preferences/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/shared_preferences/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/sqflite/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/sqflite/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/sqflite/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/file_upload_sample/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/file_upload_sample/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/第19章网络编程/file_upload_sample/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/file_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/file_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/第22章数据持久化/file_storage/.pub" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+  </component>
+</module>
