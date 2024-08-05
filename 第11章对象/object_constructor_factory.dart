@@ -1,7 +1,11 @@
 //object_constructor_factory.dart文件
+import 'dart:math';
+
 void main(){
   Logger logger = Logger('Dart');
-  logger.log('调用工厂构造方法');
+  Logger logger2 = Logger('Dart');
+  logger.log('调用工厂构造方法 ${logger.hashCode}');
+  logger.log('调用工厂构造方法 ${logger2.hashCode}');
 }
 //日志类
 class Logger {

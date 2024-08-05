@@ -13,6 +13,6 @@ void main(){
   print(map.values);
   //返回集合上键值对的数目
   print(map.length);
-  //返回对象运行时的类型
+  //返回对象运行时的类型,_Map<String, int>
   print(map.runtimeType);
 }

@@ -33,7 +33,7 @@ Future httpRequest()async{
     });
   }catch(e){
     //打印错误
-    return print('error:::${e}');
+    return print('error:::$e');
   }
 }
 

@@ -2,13 +2,14 @@
 void main(){
   //调用Person的命名构造方法
   Person p = Person.run();
+  print('${p.name}');
 }
 
 class Person{
   //姓名
-  String name;
+  String? name;
   //年龄
-  int age;
+  int? age;
   //默认构造方法
   Person(this.name,this.age);
   //命名构造方法

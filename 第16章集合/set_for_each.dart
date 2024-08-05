@@ -14,5 +14,5 @@ void main(){
   set.toList().forEach((value){
     print(value);
   });
-  
+  print('${set.runtimeType}'); //_Set<dynamic>
 }

@@ -1,6 +1,6 @@
 //mixin_object_type.dart文件
 //类A
-class A {
+mixin class A {
 
   //同名方法A
   String getMessage() => 'A';
@@ -8,7 +8,7 @@ class A {
 }
 
 //类B
-class B {
+mixin class B {
 
   //同名方法 返回B
   String getMessage() => 'B';

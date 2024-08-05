@@ -16,7 +16,7 @@ void main(){
   // 返回集合的哈希码
   print(set.hashCode);
   // 返回对象运行时的类型
-  print(set.runtimeType);
+  print(set.runtimeType);//_Set<dynamic>
   // 返回集合的可迭代对象
-  print(set.iterator);
+  print(set.iterator);//Instance of '_CompactIterator<dynamic>'
 }

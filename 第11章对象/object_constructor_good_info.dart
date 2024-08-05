@@ -27,17 +27,17 @@ void main(){
 //商品信息
 class GoodInfo{
   //商品Id
-  String goodId;
+  String? goodId;
   //商品数量
-  int amount;
+  int? amount;
   //商品图片
-  String goodImage;
+  String? goodImage;
   //商品价格
-  int goodPrice;
+  int? goodPrice;
   //商品名称
-  String goodName;
+  String? goodName;
   //商品详情
-  String goodDetail;
+  String? goodDetail;
 
   //构造方法
 //  GoodInfo(String goodId, int amount, String goodImage, double goodPrice, String goodName, String goodDetail){

@@ -24,11 +24,11 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Container(
           //使用静态方法Theme.of获取主题的accentColor
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).canvasColor,
           child: Text(
             '带有背景颜色的文本组件',
             //使用静态方法Theme.of获取主题的文本样式
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),
       ),

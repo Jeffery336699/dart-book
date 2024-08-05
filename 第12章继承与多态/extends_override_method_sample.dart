@@ -22,11 +22,11 @@ main() {
 class Animal{
 
   //属性
-  String name;
+  late String name;
 
   //父类方法
   void eat(){
-    print("${name}:会吃东西");
+    print("$name:会吃东西");
   }
 }
 
@@ -34,7 +34,7 @@ class Animal{
 class Cat extends Animal{
 
   //子类属性
-  String color;
+  late String color;
 
   //子类重写父类的eat方法
   @override

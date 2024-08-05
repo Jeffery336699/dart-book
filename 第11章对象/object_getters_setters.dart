@@ -18,6 +18,7 @@ class Rectangle {
 
   //设置bottom值 同时top也发生变化
   set bottom(num value) => top = value - height;
+
 }
 
 main() {

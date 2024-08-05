@@ -12,9 +12,9 @@ void main(){
 //图形抽象类Shape
 abstract class Shape {
   //几何图形的长
-  double width;
+  late double width;
   //几何图形的宽
-  double height;
+  late double height;
 
   //定义抽象方法 计算面积
   double area();
@@ -25,7 +25,8 @@ abstract class Shape {
 class Square extends Shape {
 
   Square(double width,double height) {
-    this.width=width;
+    /// 在调用父类中的成员变量时,this/super.xxx都行(子类没有该成员变量的情况下)
+    super.width=width;
     this.height=height;
   }
   //重写父类中的抽象方法，实现计算正方形面积的功能

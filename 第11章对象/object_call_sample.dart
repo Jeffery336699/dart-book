@@ -1,7 +1,7 @@
 //object_call_sample.dart文件
 void main(){
   //声明person对象
-  Person person = null;
+  Person? person;
   //实例化person对象
   person = Person();
   //判断对象是否为null

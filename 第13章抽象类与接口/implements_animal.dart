@@ -12,10 +12,10 @@ void main(){
 //抽象类Animal
 abstract class Animal{
   //动物名称属性
-  String name;
+  late String name;
   //显示动物名称抽象方法
   void display(){
-    print("动物的名字是:${name}");
+    print("动物的名字是:$name");
   }
   //动物进食抽象方法
   void eat();

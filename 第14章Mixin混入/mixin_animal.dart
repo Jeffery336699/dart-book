@@ -15,6 +15,9 @@ void main(){
   dove.fly();
 }
 
+///  mixin: 定义了功能模块。
+///  on： 限定了功能模块的使用类型。https://juejin.cn/post/6844904134362005511
+///  with: 负责功能模块的组合。
 
 //猫类 继承Mammal类 混入Walker类
 class Cat extends Mammal with Walker {
@@ -24,6 +27,7 @@ class Cat extends Mammal with Walker {
     print('我是一只小猫');
   }
 }
+
 
 //蝙蝠类 继承Bird类 混入Walker及Flyer类
 class Dove extends Bird with Walker, Flyer {
@@ -54,11 +58,11 @@ abstract class Fish extends Animal {
 
 }
 
-//抽象类 行走类
-abstract class Walker {
+/// 新版的with混入这样写 mixin class
+mixin class Walker {
 
   //工厂构造方法 仿止实例化
-  factory Walker._() => null;
+  factory Walker._() => null as Walker;
 
   void walk() {
     print("我会走路");
@@ -67,10 +71,10 @@ abstract class Walker {
 
 
 //抽象类 游泳类
-abstract class Swimmer {
+ class Swimmer {
 
   //工厂构造方法 仿止实例化
-  factory Swimmer._() => null;
+  factory Swimmer._() => null as Swimmer;
 
   //游泳方法
   void swim() {
@@ -80,10 +84,10 @@ abstract class Swimmer {
 }
 
 //抽象类 飞类
-abstract class Flyer{
+mixin  class Flyer{
 
   //工厂构造方法 仿止实例化
-  factory Flyer._() => null;
+  factory Flyer._() => null as Flyer;
 
   //飞方法
   void fly() {

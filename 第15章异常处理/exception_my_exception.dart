@@ -18,7 +18,7 @@ void testMyException(){
 class MyException implements Exception {
 
   //异常信息属性
-  final String msg;
+  final String? msg;
 
   //构建方法 传入可选参数msg
   MyException([this.msg]);

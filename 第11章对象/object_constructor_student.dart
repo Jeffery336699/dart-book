@@ -2,9 +2,9 @@
 //父类
 class Person {
   //姓名
-  String name;
+  String? name;
   //年龄
-  int age;
+  int? age;
   //构造方法
   Person.fromJson(Map data) {
     print('Person construct...');
