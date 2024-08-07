@@ -30,28 +30,30 @@ class ImagePickerPage extends StatefulWidget {
 
 class _ImagePickerPageState extends State<ImagePickerPage> {
   //记录选择的照片
-  File _image;
+   File? _image;
 
   //当图片上传成功后,记录当前上传的图片在服务器中的位置
-  String _imgServerPath;
+   String? _imgServerPath;
 
   //选择相册图片
   Future _getImageFromGallery() async {
     //打开相册并选择图片
-    var image = await ImagePicker.pickImage(source: ImageSource.gallery);
+    var image = await ImagePicker().pickImage(source: ImageSource.gallery);
     //设置状态
     setState(() {
       //图片文件
-      _image = image;
+      _image = File(image!.path);
     });
   }
 
   //上传图片到服务器
   _uploadImage() async {
     //创建Form表单数据
-    FormData formData = FormData.from({
-      "file": UploadFileInfo(_image, "imageName.png"),
-    });
+    // FormData formData = FormData.from({
+    //   "file": UploadFileInfo(_image, "imageName.png"),
+    // });
+    FormData? formData;
+
     //发起Post请求
     var response = await Dio()
         .post("http://192.168.2.168:3000/uploadImage/", data: formData);
@@ -73,7 +75,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
     return Container(
       child: ListView(
         children: <Widget>[
-          FlatButton(
+          TextButton(
             onPressed: () {
               _getImageFromGallery();
             },
@@ -84,11 +86,11 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
           _image == null
               ? Center(child: Text("没有选择图片"),)
               : Image.file(
-                  _image,
+                  _image!,
                   fit: BoxFit.cover,
                 ),
           SizedBox(height: 10),
-          FlatButton(
+          TextButton(
             onPressed: () {
               _uploadImage();
             },
@@ -97,7 +99,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
           SizedBox(height: 10),
           _imgServerPath == null
               ? Center(child: Text("没有上传图片"),)
-              : Image.network(_imgServerPath),
+              : Image.network(_imgServerPath!),
         ],
       ),
     );

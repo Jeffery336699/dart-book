@@ -32,7 +32,8 @@ class MyHomePage extends StatelessWidget {
   //标题
   final String title;
   //key是可选择参数,key为widget的唯一标识 title为标题是必传参数
-  MyHomePage({Key key, @required this.title}) : super(key: key);
+  /// todo @required ==> required, 大人时代变了
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

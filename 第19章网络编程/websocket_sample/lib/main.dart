@@ -38,14 +38,14 @@ class _ChatPageState extends State<ChatPage> {
   //聊天消息
   var messages = [];
   //WebSocket对象
-  IOWebSocketChannel channel;
+  late IOWebSocketChannel channel;
   //初始化
   init() async {
     //使用随机数创建userId
     userId = randomNumeric(6);
     //使用随机数创建userName
     userName = "u_" + randomNumeric(6);
-    return await createWebsocket();
+    return createWebsocket();
   }
 
   @override
@@ -195,7 +195,7 @@ class _ChatPageState extends State<ChatPage> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(formatDate(DateTime.now(), [HH, ':', nn, ':', ss]),style: Theme.of(context).textTheme.subhead),
+              Text(formatDate(DateTime.now(), [HH, ':', nn, ':', ss]),style: Theme.of(context).textTheme.headlineMedium),
               Container(
                 margin: const EdgeInsets.only(top: 5.0),
                 child: Text(item['msg'].toString()),
