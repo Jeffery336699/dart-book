@@ -1,6 +1,8 @@
 //stream_where.dart文件
 import 'dart:async';
 
+import 'package:term_glyph/src/generated/top_level.dart';
+
 void main(){
   //创建Stream,并按指定条件筛选出数据
   testWhere();
@@ -19,4 +21,7 @@ void testWhere() async {
   await for(int i in stream){
     print(i);
   }
+  /// todo 就算筛选的值是[3,5]此时的流也没有结束,没有结束!!! 注意: 多个where是&& 连接;
+  ///       如果输入条件改为 where<2 && where>6 ,此时永远都不会输出任何值
+  print('那我走?!');
 }

@@ -13,7 +13,7 @@ void testToList() async {
   Stream<int> stream = Stream.periodic(interval, (data) => data);
   //指定发送事件个数
   stream = stream.take(10);
-  //将流中所有的数据收集存放在List中
+  //将流中所有的数据收集存放在List中(需要等到流结束一次性给到你) todo await相当于剥一层壳,把Future中的数据取出来
   List<int> listData = await stream.toList();
   //输出List数据
   for(int i in listData){

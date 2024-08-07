@@ -16,4 +16,5 @@ void main(){
   });
   //添加数据
   streamController.add("Dart...");
+  streamController.close();
 }

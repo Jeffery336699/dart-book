@@ -12,7 +12,7 @@ void testStreamLength() async {
   //每隔1秒发送1次的事件流
   Stream<int> stream = Stream.periodic(interval, (data) => data);
   stream = stream.take(5);
-  //统计事件的总数量
+  //统计事件的总数量,todo 必须等到流结束才能测出流的length
   var allEvents = await stream.length;
   print(allEvents);
 }

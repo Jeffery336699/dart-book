@@ -43,14 +43,14 @@ void main(){
 //商品列表数据模型
 class GoodsListModel{
   //状态码
-  String code;
+  late String code;
   //状态信息
-  String message;
+  late String message;
   //商品列表数据,使用泛型
-  List<GoodInfo> data;
+  late List<GoodInfo> data;
 
   //构造方法
-  GoodsListModel({this.code,this.message,this.data});
+  GoodsListModel({required this.code,required this.message,required this.data});
 
   //命名构造方法
   GoodsListModel.fromJson(Map<String,dynamic> json){
@@ -58,7 +58,7 @@ class GoodsListModel{
     message = json['message'];
     if(json['data'] != null){
       //商品列表数据,泛型类型为GoodInfo
-      data = List<GoodInfo>();
+      data = <GoodInfo>[];
       json['data'].forEach((v){
         data.add(GoodInfo.fromJson(v));
       });
@@ -94,7 +94,9 @@ class GoodInfo{
   String goodDetail;
 
   //构造方法
-  GoodInfo({this.goodId,this.amount,this.goodImage,this.goodPrice,this.goodName,this.goodDetail});
+  GoodInfo({required this.goodId,required this.amount,
+    required this.goodImage,required this.goodPrice,
+    required this.goodName,required this.goodDetail});
 
   /*
    * 初始化列表在构造方法体执行前设置实例变量的值
@@ -106,8 +108,7 @@ class GoodInfo{
         goodImage = json['goodImage'],
         goodPrice = json['goodPrice'],
         goodName = json['goodName'],
-        goodDetail = json['goodDetail']{
-  }
+        goodDetail = json['goodDetail'];
 
   /*
    * 将当前对象转化成Json数据

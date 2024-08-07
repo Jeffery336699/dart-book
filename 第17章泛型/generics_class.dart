@@ -20,7 +20,7 @@ void main() {
 class Log<T>{
 
   //定义一个列表用来存储日志
-  List list = List<T>();
+  List<T> list = <T>[];
 
   //添加数据
   void add(T value){

@@ -9,9 +9,9 @@ Type _typeOf<T>() => T;
 //BlocProvider是一个有状态的组件,泛型类型为BlocBase的子类
 class BlocProvider<T extends BlocBase> extends StatefulWidget {
   BlocProvider({
-    Key key,
-    @required this.child,
-    @required this.blocs,
+    Key? key,
+    required this.child,
+    required this.blocs,
   }) : super(key: key);
 
   //定义child
@@ -22,19 +22,17 @@ class BlocProvider<T extends BlocBase> extends StatefulWidget {
   @override
   _BlocProviderState<T> createState() => _BlocProviderState<T>();
 
-  /**
-   * BlocProvider的重要方法of
-   * 泛型类型为BlocBase的子类
-   * 返回数据为blocs列表
-   */
+  /// BlocProvider的重要方法of
+  /// 泛型类型为BlocBase的子类
+  /// 返回数据为blocs列表
   static List<T> of<T extends BlocBase>(BuildContext context) {
     final type = _typeOf<_BlocProviderInherited<T>>();
     //通过BuildContext可以跨组件获取对象
     //ancestorInheritedElementForWidgetOfExactType方法获得指定类型的InheritedWidget进而获取它的共享数据。
     _BlocProviderInherited<T> provider =
-        context.ancestorInheritedElementForWidgetOfExactType(type)?.widget;
+        context.getElementForInheritedWidgetOfExactType<type>().widget;
     //返回所有的blocs
-    return provider?.blocs;
+    return provider.blocs;
   }
 }
 
@@ -59,15 +57,13 @@ class _BlocProviderState<T extends BlocBase> extends State<BlocProvider<T>> {
   }
 }
 
-/**
- * InheritedWidget是Flutter的一个功能型的Widget基类
- * 它能有效地将数据在当前Widget树中向它的子Widget树传递
- */
+/// InheritedWidget是Flutter的一个功能型的Widget基类
+/// 它能有效地将数据在当前Widget树中向它的子Widget树传递
 class _BlocProviderInherited<T> extends InheritedWidget {
   _BlocProviderInherited({
-    Key key,
-    @required Widget child,
-    @required this.blocs,
+    Key? key,
+    required Widget child,
+    required this.blocs,
   }) : super(key: key, child: child);
 
   //所有的bloc

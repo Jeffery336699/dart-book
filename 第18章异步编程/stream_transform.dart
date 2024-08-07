@@ -16,6 +16,7 @@ void testTransform() async {
     if (data == 112233) {
       //添加提示数据
       sink.add("密码输入正确...");
+      sink.add("你很棒!");
     } else {
       //添加提示数据
       sink.add("密码输入错误...");

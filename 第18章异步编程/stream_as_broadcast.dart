@@ -4,7 +4,7 @@ import 'dart:async';
 void main(){
   //实例化StreamController对象
   StreamController<String> streamController = StreamController();
-  //将单订阅流转换成多订阅流
+  //将单订阅流转换成多订阅流,stream作为接收端
   Stream stream =streamController.stream.asBroadcastStream();
   //添加第一次监听
   stream.listen((data){
@@ -14,6 +14,7 @@ void main(){
   stream.listen((data){
     print('第二次的监听数据:'+ data);
   });
+  // sink作为输入端
   streamController.sink.add("Dart...");
   //关闭流
   streamController.close();

@@ -6,7 +6,7 @@ void main() {
 
   //主isolate启动
   print("main isolate start");
-
+  printCurrentThread("main");
   //创建一个新的isolate
   create_isolate();
 
@@ -17,9 +17,10 @@ void main() {
 
 //创建一个新的isolate
 void create_isolate() async{
-
+  /// create_isolate Current isolate: main
+  printCurrentThread("create_isolate");
   //发送消息端口
-  SendPort sendPort;
+  late SendPort sendPort;
 
   //接收消息端口
   ReceivePort receivePort = ReceivePort();
@@ -44,7 +45,7 @@ void create_isolate() async{
       //当sendPort对象实例化后可以向新isolate发送消息了
       //消息类型为message
       //消息数据为字符串
-      sendPort?.send({
+      sendPort.send({
         'type':'message',
         'data':'main isolate message',
       });
@@ -55,7 +56,7 @@ void create_isolate() async{
 
 //处理耗时任务 接收一个可以向主isolate发送消息的端口
 void doWork(SendPort sendPort){
-
+  printCurrentThread("doWork");
   //打印新isolate启动
   print("new isolate start");
 
@@ -85,4 +86,11 @@ void doWork(SendPort sendPort){
   //打印新isolate停止
   print("new isolate end");
 
+}
+
+void printCurrentThread([String msg = '']) {
+  // 使用 Isolate.current 来获取当前 Isolate 的信息
+  final isolateName = Isolate.current.debugName;
+  /// doWork Current isolate: doWork
+  print('$msg Current isolate: $isolateName');
 }

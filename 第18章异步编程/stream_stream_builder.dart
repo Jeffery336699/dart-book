@@ -28,13 +28,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print('build ===> ');
     return Scaffold(
       appBar: AppBar(
         title: Text('StreamBuilder示例'),
       ),
       body: Container(
         child: Center(
-          //StreamBuilder组件,数据类型为int
+          //StreamBuilder组件,数据类型为int; todo StreamBuilder是widget的子类
           child: StreamBuilder<int>(
               //指定stream属性
               stream: _streamController.stream,

@@ -26,5 +26,5 @@ main() {
   //不显式指定泛型类型，也是可以的
   var c = SomeClass();
   //这种情况下不行，因为不符合限定
-  //var d = SomeClass<C>();
+  // var d = SomeClass<C>();
 }

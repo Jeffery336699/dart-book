@@ -27,7 +27,7 @@ class DropDownRefresh extends StatefulWidget {
 
 class _DropDownRefreshState extends State<DropDownRefresh> {
   //列表要展示的数据
-  List list = List();
+  List list = [];
   //ListView的控制器
   ScrollController scrollController = ScrollController();
   //页数

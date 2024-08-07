@@ -25,7 +25,7 @@ class FlieCache<T> implements Cache<T>{
   //重写setByKey方法
   @override
   void setByKey(String key, T value) {
-    print("我是文件缓存 把key=${key}  value=${value}的数据写入到了文件中");
+    print("我是文件缓存 把key=$key  value=$value的数据写入到了文件中");
   }
 }
 
@@ -41,6 +41,6 @@ class MemoryCache<T> implements Cache<T>{
   //重写setByKey方法
   @override
   void setByKey(String key, T value) {
-    print("我是内存缓存 把key=${key}  value=${value} -写入到了内存中");
+    print("我是内存缓存 把key=$key  value=$value -写入到了内存中");
   }
 }

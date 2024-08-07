@@ -1,7 +1,7 @@
 //async_delayed.dart文件
 import  'dart:async';
 import  'dart:io';
-
+/// Future不像sleep函数那样阻塞当前线程,走的还是异步消息队列那套
 void  main() {
   print("main start");
 

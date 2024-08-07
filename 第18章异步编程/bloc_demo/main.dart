@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Text(
           '$_counter',
-          style: Theme.of(context).textTheme.display1,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
       ),
       //增加按钮

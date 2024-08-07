@@ -1,6 +1,8 @@
 //stream_create_from_future.dart文件
 import 'dart:async';
 
+import 'isolate_create.dart' as utils show printCurrentThread;
+
 void main(){
   //创建一个Stream
   createStream();
@@ -10,6 +12,8 @@ createStream() async{
   print("开始测试");
   //创建一个Future对象
   Future<String> future = Future((){
+    /// Current isolate: main
+    utils.printCurrentThread();
     return "异步任务";
   });
 

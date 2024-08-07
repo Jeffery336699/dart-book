@@ -23,9 +23,9 @@ createStreamFromFutures() async{
     return "异步任务3";
   });
 
-  //将多个Future放入一个列表中,将该列表传入
+  //将多个Future放入一个列表中,将该列表传入; 2,3同样是被1阻塞了
   Stream<String> stream = Stream<String>.fromFutures([future1,future2,future3]);
-  //读取Stream
+  //读取Stream,同时await相当于join,后面的得等await执行完才能得到执行
   await for(var s in stream){
     print(s);
   }
