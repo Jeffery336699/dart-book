@@ -17,5 +17,6 @@ int sub(int firstNumber, int secondNumber) {
 //生成随机数
 int random(int no) {
   print("Calculator库里的random方法") ;
+  /// todo 因为calculator.dart被标记为utils库的一部分,utils库又引入了math库,所以它直接可以使用math库
   return Random().nextInt(no);
 }
